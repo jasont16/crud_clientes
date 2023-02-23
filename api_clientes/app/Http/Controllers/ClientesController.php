@@ -78,7 +78,7 @@ class ClientesController extends Controller
             'ApellidoPaterno'       => 'string|max:50',
             'ApellidoMaterno'       => 'string|max:50',
             'RazonSocial'           => 'string|max:100',
-            'RFC'                   => 'required|unique:App\Models\Cliente|string|min:10|max:13',
+            'RFC'                   => 'required|unique:App\Models\Cliente|string|min:10|max:13', //'UNIQUE' valida que el RFC no exista en la tabla
             'UsoCFDI'               => 'required|string|max:100',
             'Estatus'               => 'required|string|max:50',
             'NombreContacto'        => 'required|string|max:100',
