@@ -31,7 +31,7 @@ class Cliente extends Model
         'CP',
         'Colonia',
         'Calle',
-        'MumeroExterior',
+        'NumeroExterior',
         'NumeroInterior',
     ];
 

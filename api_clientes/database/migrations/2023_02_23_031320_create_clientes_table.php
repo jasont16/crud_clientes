@@ -34,7 +34,7 @@ return new class extends Migration
             $table->char('CP',5);
             $table->string('Colonia',50);
             $table->string('Calle',50);
-            $table->char('MumeroExterior',10);
+            $table->char('NumeroExterior',10);
             $table->char('NumeroInterior',10)->nullable();
             $table->timestamps();
         });
