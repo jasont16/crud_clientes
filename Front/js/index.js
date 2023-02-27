@@ -148,6 +148,7 @@ var app = new Vue({
         data: app.cliente
       })
         .then(function (response) {
+          console.log(response.data);
           Swal.fire({
             title: 'Se guardo correctamente!',
             text: "Cliente guardado con exito!",
@@ -160,6 +161,17 @@ var app = new Vue({
               app.$refs.cerrarModal.click();
             }
           });
+        })
+        .catch(function (error) {
+          console.log(error.response.data);
+          Swal.fire({
+            title: 'El cliente ya existe!',
+            text: error.response.data.RFC,
+            icon: 'warning',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Aceptar'
+          });
+          return;
         });
     },
 
